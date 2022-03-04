@@ -5,7 +5,19 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+
+    extend: {
+      colors: {
+        primary: {
+          900: "#FF5A76",
+          700: "#ff6982",
+        },
+        secondary: {
+          900: "#3482F6",
+          700: "#60a5fa",
+        },
+      },
+    },
   },
   plugins: [],
 };
