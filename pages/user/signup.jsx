@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import moments from "../../assets/moments.png";
+import Button from "../../components/button/Button";
+
+import Input from "../../components/input/Input";
 
 function Signup() {
   return (
@@ -19,82 +22,24 @@ function Signup() {
           <form className="w-full mb-3">
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <div className="relative mb-1 w-full">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="peer border-0 border-b-2 w-full border-gray-300 text-gray-900 focus:border-rose-600 focus:outline-none placeholder-transparent"
-                  autoComplete="off"
-                  placeholder="Enter email"
-                />
-                <lable
-                  htmlFor="email"
-                  className="absolute pointer-events-none left-0 peer-placeholder-shown:top-1 peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-900 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-500 -top-4 text-sm text-gray-500  transition-all"
-                >
-                  Email
-                </lable>
-              </div>
+              <Input type="email" name="Email" />
             </div>
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <div className="relative mb-1 w-full">
-                <input
-                  type="text"
-                  name="fullname"
-                  id="fullname"
-                  className="peer border-0 border-b-2 w-full border-gray-300 text-gray-900 focus:border-rose-600 focus:outline-none placeholder-transparent"
-                  autoComplete="off"
-                  placeholder="Enter fullname"
-                />
-                <lable
-                  htmlFor="fullname"
-                  className="absolute pointer-events-none left-0 peer-placeholder-shown:top-1 peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-900 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-500 -top-4 text-sm text-gray-500  transition-all"
-                >
-                  Full Name
-                </lable>
-              </div>
+              <Input type="text" name="Full Name" />
             </div>
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <div className="relative mb-1 w-full">
-                <input
-                  type="text"
-                  name="userName"
-                  id="userName"
-                  className="peer border-0 border-b-2 w-full border-gray-300 text-gray-900 focus:border-rose-600 focus:outline-none placeholder-transparent"
-                  autoComplete="off"
-                  placeholder="UserName"
-                />
-                <lable
-                  htmlFor="userName"
-                  className="absolute pointer-events-none left-0 peer-placeholder-shown:top-1 peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-900 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-500 -top-4 text-sm text-gray-500  transition-all"
-                >
-                  Username
-                </lable>
-              </div>
+              <Input type="text" name="Username" />
             </div>
             <div className="flex justify-center item-center gap-2 p-2">
               {/* ICON GOES HERE IF ANY */}
-              <div className="relative mb-1 w-full">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  className="peer border-0 border-b-2 w-full border-gray-300 text-gray-900 focus:border-rose-600 focus:outline-none placeholder-transparent"
-                  autoComplete="off"
-                  placeholder="Enter Password"
-                />
-                <lable
-                  htmlFor="password"
-                  className="absolute pointer-events-none left-0 peer-placeholder-shown:top-1 peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-900 peer-focus:-top-4 peer-focus:text-sm  peer-focus:text-gray-500 -top-4 text-sm text-gray-500 transition-all"
-                >
-                  Password
-                </lable>
-              </div>
+              <Input type="password" name="Password" />
             </div>
 
-            <button className="bg-blue-500 w-full py-1 px-6 rounded text-white hover:bg-blue-400">sign up</button>
+            <Button block type="submit">
+              sign up
+            </Button>
           </form>
 
           <div className="mb-3">
