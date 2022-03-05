@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ type, name }) {
+function Input({ type, name, handleChange, value }) {
   return (
     <div className="relative mb-1 w-full">
       <input
@@ -10,6 +10,8 @@ function Input({ type, name }) {
         className="peer border-0 border-b-2 w-full border-gray-300 text-gray-900 focus:border-rose-600 focus:outline-none placeholder-transparent"
         autoComplete="off"
         placeholder={`Enter ${name}`}
+        onChange={handleChange}
+        value={value}
       />
       <lable
         htmlFor={name}
