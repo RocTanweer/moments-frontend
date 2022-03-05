@@ -1,12 +1,32 @@
+// hooks
+import { useFormik } from "formik";
+// from nextjs
 import Image from "next/image";
 import Link from "next/link";
+// icons/assets
 import { FcGoogle } from "react-icons/fc";
 import moments from "../../assets/moments.png";
+// components
 import Button from "../../components/button/Button";
-
 import Input from "../../components/input/Input";
 
+import Api from "../_app";
+
+const handleFormSubmit = (data) => {
+  console.log(data);
+};
+
 function Signup() {
+  const formik = useFormik({
+    initialValues: {
+      Email: "",
+      Fullname: "",
+      Username: "",
+      Password: "",
+    },
+    onSubmit: handleFormSubmit,
+  });
+
   return (
     <div className="h-full flex justify-center items-center bg-slate-100">
       <div className="flex justify-center px-8 item-center max-w-[935px] w-full gap-2">
@@ -19,22 +39,22 @@ function Signup() {
             </div>
           </div>
 
-          <form className="w-full mb-3">
+          <form className="w-full mb-3" onSubmit={formik.handleSubmit}>
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <Input type="email" name="Email" />
+              <Input type="email" name="Email" handleChange={formik.handleChange} value={formik.values.Email} />
             </div>
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <Input type="text" name="Full Name" />
+              <Input type="text" name="Fullname" handleChange={formik.handleChange} value={formik.values.Fullname} />
             </div>
             <div className="flex justify-center item-center gap-2 p-2 ">
               {/* ICON GOES HERE IF ANY */}
-              <Input type="text" name="Username" />
+              <Input type="text" name="Username" handleChange={formik.handleChange} value={formik.values.Username} />
             </div>
             <div className="flex justify-center item-center gap-2 p-2">
               {/* ICON GOES HERE IF ANY */}
-              <Input type="password" name="Password" />
+              <Input type="password" name="Password" handleChange={formik.handleChange} value={formik.values.Password} />
             </div>
 
             <Button block type="submit">
