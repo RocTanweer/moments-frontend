@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 // from nextjs
 import Image from "next/image";
 import Link from "next/link";
+import Router from "next/router";
 // icons/assets
 import { FcGoogle } from "react-icons/fc";
 import moments from "../../assets/moments.png";
@@ -10,10 +11,23 @@ import moments from "../../assets/moments.png";
 import Button from "../../components/button/Button";
 import Input from "../../components/input/Input";
 
-import Api from "../_app";
+import { API } from "../_app";
 
-const handleFormSubmit = (data) => {
-  console.log(data);
+const handleFormSubmit = async ({ Email, Fullname, Username, Password }) => {
+  try {
+    const {
+      data: { user },
+    } = await API.post("/auth/local/register", {
+      email: Email,
+      Fullname: Fullname,
+      username: Username,
+      password: Password,
+    });
+    console.log(user);
+    Router.replace("/user/login");
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 function Signup() {
