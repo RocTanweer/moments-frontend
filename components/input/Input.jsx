@@ -13,12 +13,12 @@ function Input({ type, name, handleChange, value }) {
         onChange={handleChange}
         value={value}
       />
-      <lable
+      <label
         htmlFor={name}
         className="absolute pointer-events-none left-0 peer-placeholder-shown:top-1 peer-placeholder-shown:text-md peer-placeholder-shown:text-gray-900 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-500 -top-4 text-sm text-gray-500  transition-all"
       >
         {name}
-      </lable>
+      </label>
     </div>
   );
 }
