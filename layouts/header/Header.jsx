@@ -5,16 +5,16 @@ import Link from "next/link";
 // assets
 import logo from "../../assets/moments.png";
 // components
-import Input from "../../components/input/Input";
+import { Input } from "../../components";
 // layout
-import MobileSearch from "../mobileSearch/mobileSearch";
+import { MobileSearch } from "../";
 // third party library
 import { Menu } from "@headlessui/react";
 import { BsSearch } from "react-icons/bs";
 
 import React from "react";
 
-function Header() {
+export function Header() {
   const [mobileSearch, setMobileSearch] = useState(false);
 
   return (
@@ -76,5 +76,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

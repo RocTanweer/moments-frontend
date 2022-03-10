@@ -1,6 +1,4 @@
-import React from "react";
-
-function Input({ type, name, handleChange, value }) {
+export function Input({ type, name, handleChange, value }) {
   return (
     <div className="relative mb-1 w-full">
       <input
@@ -22,5 +20,3 @@ function Input({ type, name, handleChange, value }) {
     </div>
   );
 }
-
-export default Input;

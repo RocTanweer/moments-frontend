@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 
-function MobileSearch({ mobileSearch, setMobileSearch }) {
+export function MobileSearch({ mobileSearch, setMobileSearch }) {
   if (!mobileSearch) return <></>;
 
   return createPortal(
@@ -10,5 +10,3 @@ function MobileSearch({ mobileSearch, setMobileSearch }) {
     document.getElementById("search-portal")
   );
 }
-
-export default MobileSearch;
