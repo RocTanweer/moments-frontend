@@ -8,8 +8,10 @@ import Router from "next/router";
 import { FcGoogle } from "react-icons/fc";
 import moments from "../../assets/moments.png";
 // components
-import Button from "../../components/button/Button";
-import Input from "../../components/input/Input";
+// import {} from "../../components/button/Button";
+// import Input from "../../components/input/Input";
+
+import { Button, Input } from "../../components";
 
 import { API } from "../_app";
 

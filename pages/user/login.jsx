@@ -8,8 +8,10 @@ import signupImage from "../../assets/undraw_online_connection_6778.svg";
 import { FcGoogle } from "react-icons/fc";
 import moments from "../../assets/moments.png";
 // components
-import Input from "../../components/input/Input";
-import Button from "../../components/button/Button";
+// import Input from "../../components/input/Input";
+// import Button from "../../components/button/Button";
+
+import { Button, Input } from "../../components";
 
 import { API } from "../_app";
 
